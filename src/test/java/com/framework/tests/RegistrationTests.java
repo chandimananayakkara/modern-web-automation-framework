@@ -26,7 +26,6 @@ public class RegistrationTests extends BaseTest{
         new HomePage(driver).clickOnLoginLink();
 
         SignUpPage signupPage = new SignUpPage(driver);
-        // කලින් අපි දන්නා email එකක් දෙමු
         signupPage.startSignup("QA Engineer", "qa_test_user@mail.com");
 
 
@@ -52,9 +51,12 @@ public class RegistrationTests extends BaseTest{
         signupPage.startSignup("To Be Deleted", email);
         signupPage.fillAccountDetails("Pass123", "Delete", "Me", "Colombo");
 
-        // Account එක Delete කරන්න
+
+        signupPage.clickContinue();
+
+
         signupPage.deleteAccount();
-        Assert.assertTrue(signupPage.isAccountDeletedVisible(), "Account is not deleted");
+        Assert.assertTrue(signupPage.isAccountDeletedVisible(), "Account is not deleted!");
     }
 
     @Test

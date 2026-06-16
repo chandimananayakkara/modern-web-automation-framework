@@ -8,6 +8,7 @@ public class SignUpPage extends BasePage{
     private By nameInput = By.xpath("//input[@data-qa='signup-name']");
     private By emailInput = By.xpath("//input[@data-qa='signup-email']");
     private By signupButton = By.xpath("//button[@data-qa='signup-button']");
+    private By continueBtn = By.xpath("//a[@data-qa='continue-button']");
 
     private By passwordInput = By.id("password");
     private By firstName = By.id("first_name");
@@ -55,5 +56,9 @@ public class SignUpPage extends BasePage{
 
     public boolean isAccountDeletedVisible() {
         return driver.findElement(accountDeletedMsg).isDisplayed();
+    }
+
+    public void clickContinue() {
+        click(continueBtn);
     }
 }

@@ -15,7 +15,7 @@ public class CartTest extends BaseTest{
         productPage.gotoProducts();
         productPage.addFirstProductToCart();
 
-        // Continue Shopping ඔබන්න එපා! කෙලින්ම View Cart යන්න.
+
         productPage.clickViewCart();
 
         CartPage cartPage = new CartPage(driver);
@@ -40,9 +40,9 @@ public class CartTest extends BaseTest{
         ProductPage productPage = new ProductPage(driver);
         productPage.gotoProducts();
         productPage.addFirstProductToCart();
-        productPage.clickContinueShopping(); // මෙතනදී Pop-up එක වහනවා
+        productPage.clickContinueShopping();
 
-        productPage.goToCartFromHeader(); // මෙනු එකෙන් කරත්තයට යනවා
+        productPage.goToCartFromHeader();
 
         CartPage cartPage = new CartPage(driver);
         Assert.assertEquals(cartPage.getCartItemCount(), 1);
