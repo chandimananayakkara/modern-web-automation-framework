@@ -51,7 +51,7 @@ public class SignUpPage extends BasePage{
     }
 
     public void deleteAccount() {
-        click(deleteAccountLink);
+        clickUsingJS(deleteAccountLink);
     }
 
     public boolean isAccountDeletedVisible() {
